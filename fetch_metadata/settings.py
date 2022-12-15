@@ -26,9 +26,9 @@ MEDIA_DIR = os.path.join(BASE_DIR, 'media')
 SECRET_KEY = 'django-insecure-tb8v(_n%bw!#e=z(e%obi%h%ec6oi*e_9g3#gfn=d=u-b)2c$g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['web-production-18a7.up.railway.app']
 
 
 # Application definition
