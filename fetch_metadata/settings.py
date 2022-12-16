@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-tb8v(_n%bw!#e=z(e%obi%h%ec6oi*e_9g3#gfn=d=u-b)2c$g
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['web-production-18a7.up.railway.app']
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
 
 
 # Application definition
@@ -78,10 +78,10 @@ WSGI_APPLICATION = 'fetch_metadata.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / 'db.sqlite3',
+    # }
 }
 
 
@@ -133,8 +133,7 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     STATIC_DIR
 ]
-STATIC_ROOT = []
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 # MEDIA
 
 MEDIA_ROOT = MEDIA_DIR
@@ -148,5 +147,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Run files
 
-STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+
+
